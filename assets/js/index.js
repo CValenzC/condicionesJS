@@ -10,46 +10,45 @@ imagen1.addEventListener('click', () => {
 })
 
 //parte2
-const num1 = document.querySelector('#articulo1');
-const num2 = document.querySelector('#articulo2');
-const num3 = document.querySelector('#articulo3'); 
-const btnSumar = document.querySelector('.check');
-const resultCompra = document.querySelector('#resultCompra'); // Obtener el párrafo
+const num1 = document.querySelector('#articulo1')
+const num2 = document.querySelector('#articulo2')
+const num3 = document.querySelector('#articulo3')
+const btnSumar = document.querySelector('.check')
+const resultCompra = document.querySelector('#resultCompra')
 
 btnSumar.addEventListener('click', () => {
     // Validación de los inputs
     if (isNaN(num1.value) || num1.value.trim() === '') {
-        resultCompra.textContent = 'El valor del input 1, no es numérico, debe ingresar un número';
-        resultCompra.style.color = 'white'; // Error en rojo
-        return;
+        resultCompra.textContent = 'El valor del input 1, no es numérico, debe ingresar un número'
+        resultCompra.style.color = 'white'
+        return
     }
     if (isNaN(num2.value) || num2.value.trim() === '') {
-        resultCompra.textContent = 'El valor del input 2, no es numérico, debe ingresar un número';
-        resultCompra.style.color = 'white'; // Error en rojo
-        return;
+        resultCompra.textContent = 'El valor del input 2, no es numérico, debe ingresar un número'
+        resultCompra.style.color = 'white'
+        return
     }
     if (isNaN(num3.value) || num3.value.trim() === '') {
-        resultCompra.textContent = 'El valor del input 3, no es numérico, debe ingresar un número';
-        resultCompra.style.color = 'white'; // Error en rojo
-        return;
+        resultCompra.textContent = 'El valor del input 3, no es numérico, debe ingresar un número'
+        resultCompra.style.color = 'white'
+        return
     }
 
-    // Sumar los valores de los inputs
-    const suma = +num1.value + +num2.value + +num3.value;
+    const suma = +num1.value + +num2.value + +num3.value
 
     // Validar si el total es menor o igual a 10
     if (suma <= 10) {
-        resultCompra.textContent = `Quieres gastar: ${suma} créditos.`;
-        resultCompra.style.color = 'white'; // Mensaje de éxito en verde
+        resultCompra.textContent = `Quieres gastar: ${suma} créditos.`
+        resultCompra.style.color = 'white';
     } else {
-        resultCompra.textContent = 'Estás gastando demasiados créditos, tu límite es 10';
-        resultCompra.style.color = 'white'; // Error en rojo
+        resultCompra.textContent = 'Estás gastando demasiados créditos, tu límite es 10'
+        resultCompra.style.color = 'white';
     }
 
     // Limpiar los inputs
-    num1.value = '';
-    num2.value = '';
-    num3.value = '';
+    num1.value = ''
+    num2.value = ''
+    num3.value = ''
 });
 
 
